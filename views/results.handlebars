@@ -1,0 +1,30 @@
+<font face= "verdana" color= "white">
+<body background = "/images/olive.png">  
+
+<h1><center><p>Poll Results</p></center></h1>
+<h1><p>{{count}} People have voted so far!</p></h1>
+
+<h2>
+<p>{{#each allResults}}</p>
+<hr>
+<p>Voter: {{voterId}}</p>
+<hr>
+<p>District: {{district}}</p>
+<p><left>Trump Wins!</left></p>
+<p>
+<img src="/images/trummp.gif" alt="Drump" style="float:left;width:200px;height:200px;">
+</br>
+
+{{#each votes}}
+{{5bd905f7e7179a1b530023be}}{{.}}!
+</br>
+{{/each}}
+</br>
+</p>
+
+<p>{{/each}}</p>
+
+<p>Current Page: {{current}}</p><p>Total Pages: {{pages}}</p>
+<hr>
+</h2></font>
+
