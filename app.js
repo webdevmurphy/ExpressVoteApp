@@ -13,17 +13,17 @@ let options = { server: { socketOptions: { keepAlive: 1 } } };
 
 // Set up first mongoose connection
 let mongoose1 = require('mongoose');
-let db1 = mongoose1.createConnection('mongodb+srv://webdevmurphy789:564Wa218351@cluster0.dnydb.mongodb.net/votebot?retryWrites=true&w=majority', options);
+let db1 = mongoose1.createConnection('', options);
 let Race = require('./models/race.js')(db1);
 
 // Set up second mongoose connection
 let mongoose2 = require('mongoose');
-let db2 = mongoose2.createConnection('mongodb+srv://webdevmurphy789:564Wa218351@cluster0.dnydb.mongodb.net/tally?retryWrites=true&w=majority', options);
+let db2 = mongoose2.createConnection('', options);
 let Vote = require('./models/vote.js')(db2);
 
 // Set up third mongoose connection
 let mongoose3 = require('mongoose');
-let db3 = mongoose3.createConnection('mongodb+srv://webdevmurphy789:564Wa218351@cluster0.dnydb.mongodb.net/votestorage?retryWrites=true&w=majority', options);
+let db3 = mongoose3.createConnection('', options);
 let Tally = require('./models/tally.js')(db3);
 
 // Open the connections
